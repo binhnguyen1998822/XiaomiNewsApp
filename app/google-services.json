@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "88170922597",
+    "firebase_url": "https://xiaomifirm.firebaseio.com",
+    "project_id": "xiaomifirm",
+    "storage_bucket": "xiaomifirm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88170922597:android:b4ab99b6baa4c6db",
+        "android_client_info": {
+          "package_name": "com.app.wordpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88170922597-dm4dga7sk4ec2d9fm2a5jn27vcmg74d2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.wordpress",
+            "certificate_hash": "88cbd03861e1ab58decb9a3ab8f2a2526a3095bb"
+          }
+        },
+        {
+          "client_id": "88170922597-oh181u0pfo59qe9js642r91gltqr1asi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTD1SzItZyWbiA7AI40U7ZQhIWX0LptBA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88170922597-oh181u0pfo59qe9js642r91gltqr1asi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,111 @@
+<resources>
+
+    <string name="app_name">XiaomiNews</string>
+
+    <string name="app_version">1.0</string>
+    <string name="developer_email">nguyentb@s-developers.com</string>
+    <string name="copyright">Copyright © 2018 XiaomiFirm. \nAll Right Reserved.</string>
+    <string name="dialog_about_title">About</string>
+    <string name="about_text">
+        <![CDATA["XiaomiNews."
+            <br/>
+            <br/>Data Source : <a href="whttps://xiaomifirm.com/">XiaomiFirm</a>
+        ]]>
+    </string>
+
+    <string name="activity_title_webview">Web View</string>
+    <string name="activity_title_settings">Cài đặt</string>
+    <string name="activity_title_send_comment">Bình luận</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Toolbar menu string -->
+    <string name="title_menu_settings">Cài đặt</string>
+    <string name="title_menu_rate">Đánh giá</string>
+    <string name="title_menu_about">Giới thiệu</string>
+    <string name="title_menu_refresh">Tải lại</string>
+    <string name="title_menu_later">Đọc sau</string>
+    <string name="title_menu_share">Chia sẻ</string>
+    <string name="title_menu_browser">Mở trình duyệt</string>
+
+    <string name="webview_loading">Đang tải... </string>
+
+    <!--navigation title-->
+    <string name="title_nav_home">Trang chủ</string>
+    <string name="title_nav_category">Danh mục</string>
+    <string name="title_nav_later">Lưu trữ</string>
+    <string name="title_nav_setting">Cài đặt</string>
+    <string name="title_nav_rate">Đánh giá</string>
+    <string name="title_nav_about">Giới thiệu</string>
+    <string name="sub_title_nav_others">Khác</string>
+
+    <!-- Activity Setting : xml/setting_preference.xml -->
+    <string name="pref_group_profile">HỒ SƠ</string>
+    <string name="pref_group_notif">THÔNG BÁO</string>
+    <string name="pref_group_others">KHÁC</string>
+    <string name="pref_title_name">Tên bạn</string>
+    <string name="pref_title_email">Email</string>
+    <string name="pref_title_notif">Gửi thông báo</string>
+    <string name="pref_title_ringtone">Chuông</string>
+    <string name="pref_title_vibrate">Rung</string>
+    <string name="pref_title_copyright">Copyright</string>
+    <string name="pref_title_dev_email">Liên hệ</string>
+    <string name="pref_title_build">Phiên bản</string>
+    <string name="pref_title_term">Term &amp; Policies</string>
+    <string name="default_your_name"></string>
+    <string name="default_your_email"></string>
+
+    <!-- Other Strings -->
+    <string name="no_internet_text">Không có mạng</string>
+    <string name="no_post">Không có bài viết</string>
+    <string name="no_category">Không có danh mục</string>
+    <string name="no_post_found">Not Found</string>
+    <string name="failed_text">Lỗi khi tải dữ liệu</string>
+    <string name="failed_text_comment">Bình luận thất bại. Vui lòng thử lại</string>
+    <string name="no_inet_text_comment">Không có kết nối Internet. Vui lòng thử lại</string>
+    <string name="after_send_comment">Trạng thái bình luận của bạn</string>
+    <string name="retry_txt">Thử lại</string>
+    <string name="show_tv_comments">Xem bình luận</string>
+    <string name="send_tv_comments">Bình luận</string>
+    <string name="count_bt_comments"> bình luận</string>
+    <string name="msg_search_input">Vui lòng điền vào tìm kiếm</string>
+    <string name="task_running_msg">Lỗi!Tác vụ vẫn đang chạy</string>
+    <string name="post_detail_displayed_msg">Xem chi tiết</string>
+    <string name="post_have_no_comment">Bài đăng này không có bình luận</string>
+    <string name="cannot_add_to_read_later">Không thể thêm</string>
+    <string name="remove_from_msg">Loại bỏ</string>
+    <string name="added_to_msg">Thêm vào</string>
+    <string name="comments_bottom_message">
+    </string>
+
+    <!--exit notification-->
+    <string name="press_again_exit_app">Nhấn một lần nữa để thoát</string>
+
+
+    <string name="direct_to_browser_dialog_title">Mở trình duyệt</string>
+    <string name="direct_to_browser_dialog_text">
+        Bạn phải đăng ký và đăng nhập để bình luận.
+        \ nBạn có muốn mở bài đăng này trong trình duyệt không?
+    </string>
+
+    <string name="invalid_name">Tên không hợp lệ</string>
+    <string name="invalid_email">Email không hợp lệ</string>
+    <string name="invalid_comment">Bình luận không hợp lệ</string>
+    <string name="bt_submit">Gửi</string>
+    <string name="hint_input_name">Tên</string>
+    <string name="hint_input_email">Email</string>
+    <string name="hint_input_comment">Bình luận</string>
+
+    <!--ADS UNIT ID  -->
+    <!--interstitial ad unit id. -->
+    <string name="interstitial_ad_unit_id"></string>
+    <!--banner ad unit id. -->
+    <string name="banner_ad_unit_id"></string>
+
+    <string name="content_term">
+        </string>
+
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+
+</resources>
