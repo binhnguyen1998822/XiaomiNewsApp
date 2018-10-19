@@ -90,7 +90,7 @@ public class Tools {
     }
 
     public static void methodShare(Activity act, Post p) {
-        Uri uri = Uri.parse(p.thumbnail);
+        Uri uri = Uri.parse(p.medium);
 
         // string to share
         StringBuilder sb = new StringBuilder();
@@ -304,8 +304,8 @@ public class Tools {
     public static void displayImageThumbnail(Context ctx, Post p, ImageView imageView){
         try{
             String url = "";
-            if(p.thumbnail !=null && !p.thumbnail.equals("")) {
-                url = p.thumbnail;
+            if(p.medium !=null && !p.medium.equals("")) {
+                url = p.medium;
             }else if(p.attachments.size() > 0){
                 for(Attachment a : p.attachments){
                     if(a.mime_type.equals("image/jpeg") || a.mime_type.equals("image/png")){

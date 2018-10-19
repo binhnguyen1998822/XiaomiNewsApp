@@ -20,7 +20,7 @@ public class Post implements Serializable {
     public String excerpt = "";
     public String date = "";
     public String modified = "";
-    public String thumbnail = "";
+    public String medium = "";
     public int comment_count = -1;
 
     public List<Category> categories = new ArrayList<>();
@@ -41,7 +41,7 @@ public class Post implements Serializable {
         p.excerpt = excerpt;
         p.date = date;
         p.modified = modified;
-        p.thumbnail = thumbnail;
+        p.medium = medium;
         p.comment_count = comment_count;
 
         p.categories = new RealmList<>();

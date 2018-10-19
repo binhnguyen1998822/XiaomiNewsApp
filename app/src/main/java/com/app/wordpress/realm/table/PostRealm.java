@@ -21,7 +21,7 @@ public class PostRealm extends RealmObject {
     public String excerpt = "";
     public String date = "";
     public String modified = "";
-    public String thumbnail = "";
+    public String medium = "";
     public int comment_count = -1;
 
     public long added_date = 0;
@@ -44,7 +44,7 @@ public class PostRealm extends RealmObject {
         p.excerpt = excerpt;
         p.date = date;
         p.modified = modified;
-        p.thumbnail = thumbnail;
+        p.medium = medium;
         p.comment_count = comment_count;
 
         p.categories = new ArrayList<>();
