@@ -116,7 +116,7 @@ public class ActivitySendComment extends AppCompatActivity {
                 CallbackComment resp = response.body();
                 if (resp != null) {
                     setEnableEditText(true);
-                    String str_msg = getString(R.string.after_send_comment) + " " + resp.status.toUpperCase();
+                    String str_msg = resp.status.toUpperCase();
                     showMessageLayout(true, false, str_msg);
                     et_comment.setText("");
                 } else {

@@ -139,8 +139,6 @@ public class ActivityMain extends AppCompatActivity {
         if (id == R.id.action_settings) {
             Intent i = new Intent(getApplicationContext(), ActivitySettings.class);
             startActivity(i);
-        } else if (id == R.id.action_rate) {
-            Tools.rateAction(ActivityMain.this);
         } else if (id == R.id.action_about) {
             Tools.aboutAction(ActivityMain.this);
         }
@@ -173,10 +171,6 @@ public class ActivityMain extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), ActivitySettings.class);
                 startActivity(i);
                 break;
-            case R.id.nav_rate:
-                Tools.rateAction(ActivityMain.this);
-                break;
-
             case R.id.nav_about:
                 Tools.aboutAction(ActivityMain.this);
                 break;

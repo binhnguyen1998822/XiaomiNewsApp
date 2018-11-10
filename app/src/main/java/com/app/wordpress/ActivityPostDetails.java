@@ -227,7 +227,6 @@ public class ActivityPostDetails extends AppCompatActivity {
                 }
             }
         });
-        Snackbar.make(parent_view, R.string.post_detail_displayed_msg, Snackbar.LENGTH_SHORT).show();
     }
 
     @Override

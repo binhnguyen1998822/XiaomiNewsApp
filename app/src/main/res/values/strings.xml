@@ -60,7 +60,7 @@
     <string name="no_internet_text">Không có mạng</string>
     <string name="no_post">Không có bài viết</string>
     <string name="no_category">Không có danh mục</string>
-    <string name="no_post_found">Not Found</string>
+    <string name="no_post_found">Không tìm thấy bài viết</string>
     <string name="failed_text">Lỗi khi tải dữ liệu</string>
     <string name="failed_text_comment">Bình luận thất bại. Vui lòng thử lại</string>
     <string name="no_inet_text_comment">Không có kết nối Internet. Vui lòng thử lại</string>

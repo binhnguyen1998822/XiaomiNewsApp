@@ -23,10 +23,6 @@
                 android:id="@+id/nav_setting"
                 android:icon="@drawable/ic_nav_setting"
                 android:title="@string/title_nav_setting" />
-            <item
-                android:id="@+id/nav_rate"
-                android:icon="@drawable/ic_nav_rate"
-                android:title="@string/title_nav_rate" />
 
             <item
                 android:id="@+id/nav_about"
