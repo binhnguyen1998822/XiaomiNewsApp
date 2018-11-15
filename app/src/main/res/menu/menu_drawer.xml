@@ -23,11 +23,6 @@
                 android:id="@+id/nav_setting"
                 android:icon="@drawable/ic_nav_setting"
                 android:title="@string/title_nav_setting" />
-
-            <item
-                android:id="@+id/nav_about"
-                android:icon="@drawable/ic_nav_about"
-                android:title="@string/title_nav_about" />
         </menu>
     </item>
 

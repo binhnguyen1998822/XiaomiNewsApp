@@ -139,8 +139,6 @@ public class ActivityMain extends AppCompatActivity {
         if (id == R.id.action_settings) {
             Intent i = new Intent(getApplicationContext(), ActivitySettings.class);
             startActivity(i);
-        } else if (id == R.id.action_about) {
-            Tools.aboutAction(ActivityMain.this);
         }
 
         return super.onOptionsItemSelected(item);
@@ -170,9 +168,6 @@ public class ActivityMain extends AppCompatActivity {
             case R.id.nav_setting:
                 Intent i = new Intent(getApplicationContext(), ActivitySettings.class);
                 startActivity(i);
-                break;
-            case R.id.nav_about:
-                Tools.aboutAction(ActivityMain.this);
                 break;
         }
 
