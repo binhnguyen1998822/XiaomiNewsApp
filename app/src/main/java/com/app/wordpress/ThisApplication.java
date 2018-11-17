@@ -23,16 +23,15 @@ public class ThisApplication extends Application {
         mInstance = this;
 
         // init realm database
-        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this)
+         Realm.init(getApplicationContext());
+         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
                 .name("wordpress.realm")
                 .schemaVersion(0)
                 .deleteRealmIfMigrationNeeded()
                 .build();
         Realm.setDefaultConfiguration(realmConfiguration);
-
         // activate analytics tracker
         getGoogleAnalyticsTracker();
-
         // get enabled controllers
         Tools.requestInfoApi(this);
 
