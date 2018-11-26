@@ -61,6 +61,9 @@ public class SharedPref {
     public void setYourName(String name) {
         default_prefence.edit().putString(str(R.string.pref_title_name), name).apply();
     }
+    public void clearYourName() {
+        default_prefence.edit().remove(str(R.string.pref_title_name)).apply();
+    }
 
     public String getYourName() {
         return default_prefence.getString(str(R.string.pref_title_name), str(R.string.default_your_name));

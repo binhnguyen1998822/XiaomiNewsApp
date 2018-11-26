@@ -45,7 +45,7 @@ public class ActivitySplash extends AppCompatActivity {
         String token = "";
         for (int i = 0; i < 10; i++) {
             token = FirebaseInstanceId.getInstance().getToken();
-            if(!TextUtils.isEmpty(token)) break;
+            if (!TextUtils.isEmpty(token)) break;
         }
 
         String msg = getString(R.string.msg_token_fmt, token);
@@ -53,7 +53,7 @@ public class ActivitySplash extends AppCompatActivity {
 
         if (NetworkCheck.isConnect(this) && !TextUtils.isEmpty(token) && sharedPref.isOpenAppCounterReach()) {
             sendRegistrationToServer(token);
-        }else{
+        } else {
             progressBar.setVisibility(View.GONE);
             startNextActivity();
         }
@@ -93,7 +93,13 @@ public class ActivitySplash extends AppCompatActivity {
             public void run() {
                 ActivitySplash.this.finish();
                 Intent i = new Intent(getApplicationContext(), ActivityMain.class);
-                startActivity(i);
+                Intent l = new Intent(getApplicationContext(), ActivityLogin.class);
+                if (sharedPref.getYourName().isEmpty()) {
+                    startActivity(l);
+                } else {
+                    startActivity(i);
+                }
+
             }
         }, Constant.DELAY_TIME_SPLASH);
     }

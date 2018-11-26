@@ -1,6 +1,7 @@
 package com.app.wordpress;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -46,6 +47,16 @@ public class ActivitySettings extends PreferenceActivity {
         final EditTextPreference prefName = (EditTextPreference) findPreference(getString(R.string.pref_title_name));
         final EditTextPreference prefEmail = (EditTextPreference) findPreference(getString(R.string.pref_title_email));
         final Preference prefTerm = (Preference) findPreference(getString(R.string.pref_title_term));
+        final Preference logout = (Preference) findPreference("logout");
+        logout.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                sharedPref.clearYourName();
+                Intent i = new Intent(getApplicationContext(), ActivitySplash.class);
+                startActivity(i);
+                return false;
+            }
+        });
 
         prefName.setSummary(sharedPref.getYourName());
         prefName.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
@@ -83,24 +94,12 @@ public class ActivitySettings extends PreferenceActivity {
             }
         });
 
-        prefTerm.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                dialogTerm(ActivitySettings.this);
-                return false;
-            }
-        });
+
 
         initToolbar();
     }
 
-    public void dialogTerm(Activity activity) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-        builder.setTitle(activity.getString(R.string.pref_title_term));
-        builder.setMessage(activity.getString(R.string.content_term));
-        builder.setPositiveButton("OK", null);
-        builder.show();
-    }
+
 
 
     @Override

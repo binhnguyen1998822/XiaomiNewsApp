@@ -34,8 +34,7 @@ import com.google.android.gms.ads.InterstitialAd;
 
 public class ActivityMain extends AppCompatActivity {
 
-    //for ads
-    private InterstitialAd mInterstitialAd;
+
 
     private Toolbar toolbar;
     private ActionBar actionBar;
@@ -54,7 +53,6 @@ public class ActivityMain extends AppCompatActivity {
         sharedPref = new SharedPref(this);
         fab = (FloatingActionButton) findViewById(R.id.fab);
 
-        prepareAds();
         initToolbar();
         initDrawerMenu();
 
@@ -82,7 +80,6 @@ public class ActivityMain extends AppCompatActivity {
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
             public void onDrawerOpened(View drawerView) {
-                showInterstitial();
                 super.onDrawerOpened(drawerView);
             }
         };
@@ -190,22 +187,9 @@ public class ActivityMain extends AppCompatActivity {
         }
     }
 
-    private void prepareAds() {
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
-        AdRequest adRequest2 = new AdRequest.Builder().build();
-        mInterstitialAd.loadAd(adRequest2);
-    }
 
-    /**
-     * show ads
-     */
-    public void showInterstitial() {
-        // Show the ad if it's ready
-        if (AppConfig.ENABLE_ADSENSE && mInterstitialAd != null && mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
-        }
-    }
+
+
 
     private void startIntroAnimation() {
         fab.setTranslationY(2 * getResources().getDimensionPixelOffset(R.dimen.btn_fab_size));

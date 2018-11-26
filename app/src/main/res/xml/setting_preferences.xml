@@ -49,8 +49,9 @@
             android:summary="@string/app_version"
             android:title="@string/pref_title_build" />
         <Preference
-            android:key="@string/pref_title_term"
-            android:title="@string/pref_title_term" />
+            android:defaultValue="Đăng xuất"
+            android:key="logout"
+            android:title="Đăng xuất" />
     </PreferenceCategory>
 
 </PreferenceScreen>

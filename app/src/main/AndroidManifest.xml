@@ -7,30 +7,31 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.app.wordpress.ThisApplication"
+        android:name=".ThisApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.app.wordpress.ActivityMain" />
-        <activity android:name="com.app.wordpress.ActivitySplash">
+        <activity android:name=".ActivityMain" />
+        <activity android:name=".ActivitySplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.app.wordpress.ActivityPostDetails" />
-        <activity android:name="com.app.wordpress.ActivityCategoryDetails" />
-        <activity android:name="com.app.wordpress.ActivityWebView" />
+        <activity android:name=".ActivityPostDetails" />
+        <activity android:name=".ActivityCategoryDetails" />
+        <activity android:name=".ActivityWebView" />
         <activity
-            android:name="com.app.wordpress.ActivitySettings"
+            android:name=".ActivitySettings"
             android:theme="@style/AppThemeSetting" />
         <activity
-            android:name="com.app.wordpress.ActivitySearch"
+            android:name=".ActivitySearch"
             android:windowSoftInputMode="stateVisible" />
         <activity
-            android:name="com.app.wordpress.ActivitySendComment"
+            android:name=".ActivitySendComment"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/AppThemeDialog" />
 
@@ -41,21 +42,20 @@
             android:theme="@android:style/Theme.Translucent" />
 
         <!-- fireBase service -->
-        <service
-            android:name="com.app.wordpress.fcm.FcmMessagingService">
+        <service android:name=".fcm.FcmMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
         <!-- fireBase iid service] -->
-        <service
-            android:name="com.app.wordpress.fcm.FcmInstanceIDService">
+        <service android:name=".fcm.FcmInstanceIDService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
+        <activity android:name=".ActivityLogin"></activity>
     </application>
 
 </manifest>
