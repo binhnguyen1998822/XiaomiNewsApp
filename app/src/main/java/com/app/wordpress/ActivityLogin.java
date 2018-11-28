@@ -63,6 +63,13 @@ public class ActivityLogin extends AppCompatActivity {
         alert.show();
     }
 
+    public void DefaultUser(View view){
+        sharedPref.setYourName("XiaomiFirm");
+        sharedPref.setYourEmail("user@xiaomifirm.info");
+        Intent i = new Intent(getApplicationContext(), ActivityMain.class);
+        startActivity(i);
+    }
+
     public void Dangnhap(View view) {
         final String username = email.getText().toString().trim();
         final String email = password.getText().toString().trim();

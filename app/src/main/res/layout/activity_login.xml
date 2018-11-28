@@ -40,6 +40,15 @@
         android:paddingLeft="6dp" />
 
 
+
+    <TextView
+        android:onClick="DefaultUser"
+        android:textColor="#3d4dde"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="Tôi không muốn đăng nhập."/>
+
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
