@@ -1,11 +1,12 @@
 package com.app.wordpress;
 
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
@@ -43,12 +44,15 @@ public class ActivityLogin extends AppCompatActivity {
         alert.setTitle("Đăng ký");
 
         WebView wv = new WebView(this);
+        WebSettings webSettings=wv.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setAllowContentAccess(true);
+        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         wv.loadUrl("https://xiaomifirm.com/register");
         wv.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
-
                 return true;
             }
         });
@@ -68,6 +72,7 @@ public class ActivityLogin extends AppCompatActivity {
         sharedPref.setYourEmail("user@xiaomifirm.info");
         Intent i = new Intent(getApplicationContext(), ActivityMain.class);
         startActivity(i);
+        finish();
     }
 
     public void Dangnhap(View view) {
@@ -101,7 +106,7 @@ public class ActivityLogin extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
                 progressBar.setVisibility(View.GONE);
-                Toast.makeText(ActivityLogin.this, "Lỗi", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActivityLogin.this, "Lỗi Đăng Nhập", Toast.LENGTH_SHORT).show();
             }
         });
 

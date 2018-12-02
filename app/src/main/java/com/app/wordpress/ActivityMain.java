@@ -2,6 +2,7 @@ package com.app.wordpress;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -22,19 +23,14 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.app.wordpress.data.AppConfig;
 import com.app.wordpress.data.Constant;
 import com.app.wordpress.data.SharedPref;
 import com.app.wordpress.fragment.FragmentCategory;
 import com.app.wordpress.fragment.FragmentHome;
 import com.app.wordpress.fragment.FragmentLater;
 import com.app.wordpress.utils.Tools;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 
 public class ActivityMain extends AppCompatActivity {
-
-
 
     private Toolbar toolbar;
     private ActionBar actionBar;
@@ -164,7 +160,7 @@ public class ActivityMain extends AppCompatActivity {
                 break;
             case R.id.nav_setting:
                 Intent i = new Intent(getApplicationContext(), ActivitySettings.class);
-                startActivity(i);
+                startActivityForResult(i,1221);
                 break;
         }
 
@@ -186,10 +182,18 @@ public class ActivityMain extends AppCompatActivity {
             finish();
         }
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-
-
-
+        if (requestCode == 1221) {
+            if(resultCode == Activity.RESULT_OK){
+             finish();
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
+        }
+    }
 
     private void startIntroAnimation() {
         fab.setTranslationY(2 * getResources().getDimensionPixelOffset(R.dimen.btn_fab_size));
@@ -240,5 +244,4 @@ public class ActivityMain extends AppCompatActivity {
         super.onStop();
         active = false;
     }
-
 }
