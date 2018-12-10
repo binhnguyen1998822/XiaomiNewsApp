@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -39,35 +40,53 @@ public class ActivityLogin extends AppCompatActivity {
         sharedPref = new SharedPref(this);
     }
 
-    public void Dangky(View view){
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("Đăng ký");
+    public void Dangky(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View v = inflater.inflate(R.layout.test, null);
 
-        WebView wv = new WebView(this);
-        WebSettings webSettings=wv.getSettings();
+        WebView web = (WebView) v.findViewById(R.id.web);
+        EditText edit = (EditText) v.findViewById(R.id.edit);
+        edit.setFocusable(true);
+        edit.requestFocus();
+        WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        webSettings.setAllowContentAccess(true);
-        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
-        wv.loadUrl("https://xiaomifirm.com/register");
-        wv.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-        });
-
-        alert.setView(wv);
-        alert.setNegativeButton("Đóng", new DialogInterface.OnClickListener() {
+        web.loadUrl("https://xiaomifirm.com/register");
+        builder.setNegativeButton("Đóng", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
                 dialog.dismiss();
             }
         });
-        alert.show();
+        builder.setView(v);
+
+        builder.show();
+
+//        WebView wv = new WebView(this);
+//        wv.requestFocusFromTouch();
+//        wv.getSettings().setUseWideViewPort(true);
+//        WebSettings webSettings=wv.getSettings();
+//        webSettings.setJavaScriptEnabled(true);
+//        wv.loadUrl("https://xiaomifirm.com/register");
+//        wv.setWebViewClient(new WebViewClient() {
+//            @Override
+//            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+//                view.loadUrl(url);
+//                return true;
+//            }
+//        });
+//
+//        alert.setView(wv);
+//        alert.setNegativeButton("Đóng", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int id) {
+//                dialog.dismiss();
+//            }
+//        });
+//        alert.show();
     }
 
-    public void DefaultUser(View view){
+    public void DefaultUser(View view) {
         sharedPref.setYourName("XiaomiFirm");
         sharedPref.setYourEmail("user@xiaomifirm.info");
         Intent i = new Intent(getApplicationContext(), ActivityMain.class);
